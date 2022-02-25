@@ -1,3 +1,4 @@
 dist
+extension/manifest.json
 node_modules
 public
