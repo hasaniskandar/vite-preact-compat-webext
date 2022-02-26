@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import { onMessage } from 'webext-bridge'
-import { createApp } from 'vue'
-import App from './views/App.vue'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './views/App'
+import '../styles'
 
 // Firefox `browser.tabs.executeScript()` requires scripts return a primitive value
 ;(() => {
@@ -26,5 +28,8 @@ import App from './views/App.vue'
   shadowDOM.appendChild(styleEl)
   shadowDOM.appendChild(root)
   document.body.appendChild(container)
-  createApp(App).mount(root)
+  ReactDOM.render(
+    React.createElement(React.StrictMode, null, React.createElement(App, null)),
+    root
+  )
 })()

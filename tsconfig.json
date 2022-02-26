@@ -12,10 +12,11 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vite/client"],
+    "types": ["unplugin-icons/types/preact", "vite/client"],
     "paths": {
       "~/*": ["src/*"]
-    }
+    },
+    "jsx": "react-jsx"
   },
   "exclude": ["dist", "node_modules"]
 }

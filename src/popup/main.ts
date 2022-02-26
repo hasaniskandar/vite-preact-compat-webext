@@ -1,6 +1,10 @@
-import { createApp } from 'vue'
-import App from './Popup.vue'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './Popup'
 import '../styles'
 
-const app = createApp(App)
-app.mount('#app')
+const app = document.getElementById('app')
+ReactDOM.render(
+  React.createElement(React.StrictMode, null, React.createElement(App, null)),
+  app
+)

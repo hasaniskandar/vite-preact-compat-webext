@@ -1,0 +1,3 @@
+# Ignore generated files
+extension/dist
+extension/manifest.json

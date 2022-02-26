@@ -1,9 +1,7 @@
 import { dirname, relative } from 'path'
 import { defineConfig, UserConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
+import preact from '@preact/preset-vite'
 import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import WindiCSS from 'vite-plugin-windicss'
 import windiConfig from './windi.config'
@@ -14,17 +12,19 @@ export const sharedConfig: UserConfig = {
   resolve: {
     alias: {
       '~/': `${r('src')}/`,
+      react: 'preact/compat',
+      'react-dom': 'preact/compat',
     },
   },
   define: {
     __DEV__: isDev,
   },
   plugins: [
-    Vue(),
+    preact(),
 
     AutoImport({
       imports: [
-        'vue',
+        'react',
         {
           'webextension-polyfill': [['*', 'browser']],
         },
@@ -32,21 +32,8 @@ export const sharedConfig: UserConfig = {
       dts: r('src/auto-imports.d.ts'),
     }),
 
-    // https://github.com/antfu/unplugin-vue-components
-    Components({
-      dirs: [r('src/components')],
-      // generate `components.d.ts` for ts support with Volar
-      dts: true,
-      resolvers: [
-        // auto import icons
-        IconsResolver({
-          componentPrefix: '',
-        }),
-      ],
-    }),
-
     // https://github.com/antfu/unplugin-icons
-    Icons(),
+    Icons({ compiler: 'jsx', jsx: 'react' }),
 
     // rewrite assets to use relative path
     {
@@ -62,8 +49,7 @@ export const sharedConfig: UserConfig = {
     },
   ],
   optimizeDeps: {
-    include: ['vue', '@vueuse/core', 'webextension-polyfill'],
-    exclude: ['vue-demi'],
+    include: ['preact', 'webextension-polyfill'],
   },
 }
 

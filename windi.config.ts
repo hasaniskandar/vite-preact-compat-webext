@@ -6,6 +6,6 @@ export default defineConfig({
   // https://windicss.org/posts/v30.html#attributify-mode
   attributify: true,
   extract: {
-    include: [resolve(__dirname, 'src/**/*.{vue,html}')],
+    include: [resolve(__dirname, 'src/**/*.{html,ts,tsx}')],
   },
 })
