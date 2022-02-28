@@ -16,7 +16,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - ⚡️ **Instant HMR** - use **Vite** on dev (no more refresh!)
 - ⚛️ React - via [`preact/compat`](https://preactjs.com/guide/v10/switching-to-preact)
 - 💬 Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge)
-- 🍃 [Windi CSS](https://windicss.org/) - on-demand CSS utilities
+- 🍃 [Tailwind CSS](https://tailwindcss.com/) - on-demand CSS utilities
 - 🦾 [TypeScript](https://www.typescriptlang.org/) - type safe
 - 🖥 Content Script - Use React even in content script
 - 🌍 WebExtension - isomorphic extension for Chrome, Firefox, and others
@@ -34,16 +34,16 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use `browser` without importing
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - icons as components
   - [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - WindiCSS support
 
 ### UI Frameworks
 
-- [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - utility-first CSS framework
 
 ### Coding Style
 
 - [ESLint](https://eslint.org/) - single quotes, no semi
 - [Prettier](https://prettier.io/)
+  - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) - automatically sorts classes
 
 ### Dev tools
 

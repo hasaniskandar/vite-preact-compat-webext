@@ -9,12 +9,12 @@ export default function Popup() {
   const [storageDemo] = useStorageLocal<string>('webext-demo', 'Storage Demo')
 
   return (
-    <main className="text-center py-5 px-4 text-gray-700 w-[300px]">
+    <main className="w-[300px] py-5 px-4 text-center text-gray-700">
       <Logo />
       <div>Popup</div>
       <p className="mt-2 opacity-50">This is the popup page</p>
 
-      <button className="mt-2 btn" onClick={openOptionsPage}>
+      <button className="btn mt-2" onClick={openOptionsPage}>
         Open Options
       </button>
 

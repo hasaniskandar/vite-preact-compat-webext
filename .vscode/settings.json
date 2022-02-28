@@ -7,6 +7,5 @@
   },
   "files.associations": {
     "*.css": "postcss"
-  },
-  "windicss.sortOnSave": true
+  }
 }

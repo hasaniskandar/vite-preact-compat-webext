@@ -9,19 +9,19 @@ export default function Options() {
   )
 
   return (
-    <main className="text-center py-10 px-4 text-gray-700 dark:text-gray-200">
-      <IconSliders className="mx-2 text-2xl icon-btn" />
+    <main className="py-10 px-4 text-center text-gray-700 dark:text-gray-200">
+      <IconSliders className="icon-btn mx-2 text-2xl" />
       <div>Options</div>
       <p className="mt-2 opacity-50">This is the options page</p>
 
       <input
-        className="border rounded border-gray-400 mt-2 py-1 px-2"
+        className="mt-2 rounded border border-gray-400 py-1 px-2"
         value={storageDemo}
         onChange={(event) => setStorageDemo(event.target.value)}
       />
 
       <div className="mt-4">
-        Powered by Vite <IconZap className="align-middle" />
+        Powered by Vite <IconZap className="inline-block align-middle" />
       </div>
     </main>
   )

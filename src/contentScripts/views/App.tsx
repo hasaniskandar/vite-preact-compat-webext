@@ -5,9 +5,9 @@ export default function App() {
   const [isTextShown, toggleIsTextShown] = useToggle(false)
 
   return (
-    <div className="flex font-sans m-5 right-0 bottom-0 leading-1em z-100 fixed select-none">
+    <div className="fixed right-0 bottom-0 z-[100] m-5 flex select-none font-sans leading-[1em]">
       <div
-        className={`bg-white text-gray-800 rounded-full shadow w-max h-min p-4 py-2 my-auto mr-2 transition-opacity transition-duration-300 ${
+        className={`my-auto mr-2 h-min w-max rounded-full bg-white p-4 py-2 text-gray-800 shadow transition-opacity duration-300 ${
           isTextShown ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -15,10 +15,10 @@ export default function App() {
       </div>
       <button
         type="button"
-        className="border-none rounded-full cursor-pointer flex bg-teal-600 h-10 shadow w-10 hover:bg-teal-700"
+        className="flex h-10 w-10 cursor-pointer rounded-full border-none bg-teal-600 shadow hover:bg-teal-700"
         onClick={() => toggleIsTextShown()}
       >
-        <IconPower className="m-auto text-white text-lg block" />
+        <IconPower className="m-auto block text-lg text-white" />
       </button>
     </div>
   )
