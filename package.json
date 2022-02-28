@@ -20,7 +20,7 @@
     "start:chromium": "web-ext run --source-dir ./extension --target=chromium",
     "start:firefox": "web-ext run --source-dir ./extension --target=firefox-desktop",
     "clear": "rimraf extension/dist extension/manifest.json extension.*",
-    "lint": "npm run lint:eslint --fix && prettier --write .eslintrc '**/*.(html|json|yml)'",
+    "lint": "npm run lint:eslint -- --fix && prettier --write .eslintrc '**/*.(html|json|yml)'",
     "lint:check": "npm run lint:eslint && prettier --check .eslintrc '**/*.(html|json|yml)'",
     "lint:eslint": "eslint . --ext=js,ts,tsx"
   },
